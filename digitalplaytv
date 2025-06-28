@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL PLAY - Sua TV do Futuro</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Custom styles for the futuristic theme with a softer background */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111827; /* Softer, deep slate blue */
+            color: #e5e7eb; /* Light gray for text */
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .hero-bg {
+            background: radial-gradient(circle at 50% 50%, rgba(30, 41, 59, 0.9) 0%, #111827 70%), url('https://placehold.co/1920x1080/111827/374151?text=') no-repeat center center / cover;
+        }
+        .glass-effect {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(56, 189, 248, 0.1);
+        }
+        .glow-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.5), 0 0 20px rgba(56, 189, 248, 0.3);
+        }
+        .glow-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.8), 0 0 35px rgba(56, 189, 248, 0.5);
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+        .form-input {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: #38bdf8;
+            outline: none;
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 glass-effect">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#818cf8;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M6.34315 17.6569C5.22436 16.5381 4.46243 15.1126 4.15074 13.5607C3.83905 12.0089 4.00346 10.4206 4.62299 8.99479C5.24252 7.56898 6.29337 6.37894 7.62299 5.58661C8.95261 4.79427 10.4879 4.44189 12 4.56689C13.5121 4.69189 14.9653 5.28696 16.1421 6.26254C17.319 7.23811 18.1633 8.54785 18.5554 10.0093C18.9474 11.4708 18.8649 13.0132 18.3236 14.4394C17.7824 15.8656 16.8116 17.1112 15.5563 18.0104L12 15.4641L6.34315 17.6569Z" stroke="url(#logoGradient)" stroke-width="1.5"/>
+                    <path d="M12 4.5V15.5L15.5 18" stroke="url(#logoGradient)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="font-orbitron text-2xl font-bold text-white">DIGITAL <span class="text-sky-400">PLAY</span></span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-gray-300 hover:text-sky-400 transition duration-300">Início</a>
+                <a href="#vantagens" class="text-gray-300 hover:text-sky-400 transition duration-300">Vantagens</a>
+                <a href="#planos" class="text-gray-300 hover:text-sky-400 transition duration-300">Planos</a>
+                <a href="#teste" class="text-gray-300 hover:text-sky-400 transition duration-300">Solicitar Teste</a>
+            </nav>
+            <a href="https://wa.me/5581989745805?text=Ol%C3%A1%21+Gostaria+de+solicitar+um+teste+gr%C3%A1tis+de+4+horas." target="_blank" class="hidden md:inline-block bg-sky-500 text-white font-bold py-2 px-5 rounded-full glow-button">
+                Peça seu Teste
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-bg min-h-screen flex items-center pt-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-7xl font-orbitron font-extrabold text-white mb-4 leading-tight">
+                    A REVOLUÇÃO DA TV <span class="text-sky-400">CHEGOU</span>
+                </h1>
+                <p class="text-lg md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+                    Assista a milhares de canais, filmes e séries onde e quando quiser. A melhor programação na palma da sua mão com a DIGITAL PLAY.
+                </p>
+                <a href="https://wa.me/5581989745805?text=Ol%C3%A1%21+Gostaria+de+solicitar+um+teste+gr%C3%A1tis+de+4+horas." target="_blank" class="bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-bold py-4 px-10 rounded-full text-lg glow-button inline-block">
+                    QUERO MEU TESTE GRÁTIS DE 4 HORAS
+                </a>
+            </div>
+        </section>
+
+        <section id="vantagens" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-orbitron font-bold text-center text-white mb-12 section-title">POR QUE ESCOLHER A DIGITAL PLAY?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="glass-effect p-8 rounded-2xl text-center hover:border-sky-400 transition-all duration-300 transform hover:-translate-y-2">
+                        <i class="fas fa-tv text-5xl text-sky-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Canais ao Vivo</h3>
+                        <p class="text-gray-400">Toda a grade de canais abertos e fechados para você não perder nada.</p>
+                    </div>
+                    <div class="glass-effect p-8 rounded-2xl text-center hover:border-sky-400 transition-all duration-300 transform hover:-translate-y-2">
+                        <i class="fas fa-film text-5xl text-sky-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Filmes e Séries</h3>
+                        <p class="text-gray-400">Um catálogo gigante com os últimos lançamentos e clássicos do cinema.</p>
+                    </div>
+                    <div class="glass-effect p-8 rounded-2xl text-center hover:border-sky-400 transition-all duration-300 transform hover:-translate-y-2">
+                        <i class="fas fa-satellite-dish text-5xl text-sky-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Qualidade 4K</h3>
+                        <p class="text-gray-400">Assista com a máxima qualidade de imagem, sem travamentos.</p>
+                    </div>
+                    <div class="glass-effect p-8 rounded-2xl text-center hover:border-sky-400 transition-all duration-300 transform hover:-translate-y-2">
+                        <i class="fas fa-mobile-alt text-5xl text-sky-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Multiplataforma</h3>
+                        <p class="text-gray-400">Compatível com Smart TV, Celular, TV Box, Tablet e Computador.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Plans Section Updated -->
+        <section id="planos" class="py-20 bg-black bg-opacity-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-orbitron font-bold text-center text-white mb-12 section-title">PLANOS QUE CABEM NO SEU BOLSO</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Monthly Plan -->
+                    <div class="glass-effect p-8 rounded-2xl w-full text-center border-2 border-transparent hover:border-sky-500 transition-all duration-300 transform hover:scale-105 flex flex-col">
+                        <h3 class="text-2xl font-bold text-white">PLANO MENSAL</h3>
+                        <p class="text-sky-400 font-orbitron text-4xl font-bold my-4">R$25<span class="text-2xl">,00</span></p>
+                        <ul class="text-gray-300 space-y-3 my-6 text-left flex-grow">
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Acesso a 1 Tela</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>+90 Mil Conteúdos</li>
+                            <li><i class="fas fa-times text-red-400 mr-2"></i>Sem Conteúdo Adulto</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Suporte 24/7</li>
+                        </ul>
+                        <a href="https://wa.me/5581989745805?text=Ol%C3%A1%21+Tenho+interesse+no+Plano+Mensal+de+R%2425." target="_blank" class="mt-auto bg-sky-500 text-white font-bold py-3 px-8 rounded-full glow-button w-full inline-block">Contratar Agora</a>
+                    </div>
+                    
+                     <!-- Quarterly Plan -->
+                    <div class="glass-effect p-8 rounded-2xl w-full text-center border-2 border-indigo-500 transition-all duration-300 transform md:scale-105 relative flex flex-col">
+                        <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-indigo-500 text-white text-sm font-bold px-4 py-1 rounded-full">MAIS POPULAR</span>
+                        <h3 class="text-2xl font-bold text-white">PLANO TRIMESTRAL</h3>
+                        <p class="text-indigo-400 font-orbitron text-4xl font-bold my-4">R$59<span class="text-2xl">,99</span></p>
+                        <ul class="text-gray-300 space-y-3 my-6 text-left flex-grow">
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Acesso a 1 Tela</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>+90 Mil Conteúdos</li>
+                            <li><i class="fas fa-times text-red-400 mr-2"></i>Sem Conteúdo Adulto</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Suporte 24/7</li>
+                        </ul>
+                        <a href="https://wa.me/5581989745805?text=Ol%C3%A1%21+Tenho+interesse+no+Plano+Trimestral+de+R%2459%2C99." target="_blank" class="mt-auto bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-bold py-3 px-8 rounded-full glow-button w-full inline-block">Contratar Agora</a>
+                    </div>
+
+                    <!-- Semiannual Plan -->
+                    <div class="glass-effect p-8 rounded-2xl w-full text-center border-2 border-transparent hover:border-sky-500 transition-all duration-300 transform hover:scale-105 flex flex-col">
+                        <h3 class="text-2xl font-bold text-white">PLANO SEMESTRAL</h3>
+                        <p class="text-sky-400 font-orbitron text-4xl font-bold my-4">R$129<span class="text-2xl">,90</span></p>
+                        <ul class="text-gray-300 space-y-3 my-6 text-left flex-grow">
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Acesso a 3 Telas</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>+90 Mil Conteúdos</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Com Conteúdo Adulto</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Suporte 24/7</li>
+                        </ul>
+                        <a href="https://wa.me/5581989745805?text=Ol%C3%A1%21+Tenho+interesse+no+Plano+Semestral+de+R%24129%2C90." target="_blank" class="mt-auto bg-sky-500 text-white font-bold py-3 px-8 rounded-full glow-button w-full inline-block">Contratar Agora</a>
+                    </div>
+
+                    <!-- Annual Plan -->
+                    <div class="glass-effect p-8 rounded-2xl w-full text-center border-2 border-transparent hover:border-sky-500 transition-all duration-300 transform hover:scale-105 flex flex-col">
+                        <h3 class="text-2xl font-bold text-white">PLANO ANUAL</h3>
+                        <p class="text-sky-400 font-orbitron text-4xl font-bold my-4">R$149<span class="text-2xl">,90</span></p>
+                        <ul class="text-gray-300 space-y-3 my-6 text-left flex-grow">
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Acesso a 3 Telas</li>
+                             <li><i class="fas fa-check text-green-400 mr-2"></i>+90 Mil Conteúdos</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Com Conteúdo Adulto</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Suporte 24/7</li>
+                        </ul>
+                        <a href="https://wa.me/5581989745805?text=Ol%C3%A1%21+Tenho+interesse+no+Plano+Anual+de+R%24149%2C90." target="_blank" class="mt-auto bg-sky-500 text-white font-bold py-3 px-8 rounded-full glow-button w-full inline-block">Contratar Agora</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="teste" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-orbitron font-bold text-center text-white mb-4 section-title">PEÇA SEU TESTE GRÁTIS</h2>
+                <p class="text-center text-gray-400 mb-10 max-w-2xl mx-auto">Preencha os dados abaixo para solicitar seu teste de 4 horas. Um e-mail será gerado para envio. Após o envio, entre em contato pelo nosso WhatsApp para agilizar a liberação.</p>
+                <div class="glass-effect max-w-lg mx-auto p-8 rounded-2xl">
+                    <form action="mailto:digitalgrafic2525@gmail.com" method="post" enctype="text/plain" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-300 mb-2">Seu Nome</label>
+                            <input type="text" id="name" name="Nome" class="w-full p-3 rounded-lg form-input" placeholder="Digite seu nome completo" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-300 mb-2">Seu E-mail</label>
+                            <input type="email" id="email" name="Email_Cliente" class="w-full p-3 rounded-lg form-input" placeholder="exemplo@email.com" required>
+                        </div>
+                        <div>
+                            <label for="celular" class="block text-gray-300 mb-2">Seu Celular (com DDD)</label>
+                            <input type="tel" id="celular" name="Celular_Cliente" class="w-full p-3 rounded-lg form-input" placeholder="Ex: 11999998888" required>
+                        </div>
+                        <input type="hidden" name="subject" value="Solicitação de Teste IPTV - DIGITAL PLAY">
+                        <button type="submit" class="w-full bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-bold py-4 px-10 rounded-full text-lg glow-button">
+                            <i class="fas fa-paper-plane mr-2"></i> ENVIAR PEDIDO DE TESTE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black bg-opacity-40 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <div class="flex justify-center items-center space-x-2 mb-4">
+                 <a href="#" class="flex items-center space-x-2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#logoGradient"></use>
+                        <path d="M6.34315 17.6569C5.22436 16.5381 4.46243 15.1126 4.15074 13.5607C3.83905 12.0089 4.00346 10.4206 4.62299 8.99479C5.24252 7.56898 6.29337 6.37894 7.62299 5.58661C8.95261 4.79427 10.4879 4.44189 12 4.56689C13.5121 4.69189 14.9653 5.28696 16.1421 6.26254C17.319 7.23811 18.1633 8.54785 18.5554 10.0093C18.9474 11.4708 18.8649 13.0132 18.3236 14.4394C17.7824 15.8656 16.8116 17.1112 15.5563 18.0104L12 15.4641L6.34315 17.6569Z" stroke="url(#logoGradient)" stroke-width="1.5"/>
+                        <path d="M12 4.5V15.5L15.5 18" stroke="url(#logoGradient)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="font-orbitron text-xl font-bold text-white">DIGITAL PLAY</span>
+                </a>
+            </div>
+            <p>&copy; 2024 DIGITAL PLAY. Todos os direitos reservados.</p>
+            <p class="text-sm">O futuro da televisão está aqui.</p>
+            <div class="mt-4">
+                <a href="https://wa.me/5581989745805?text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es." target="_blank" class="text-green-400 hover:text-green-300 text-2xl">
+                    <i class="fab fa-whatsapp-square"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
